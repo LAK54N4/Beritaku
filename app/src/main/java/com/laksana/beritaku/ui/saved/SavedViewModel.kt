@@ -1,13 +1,13 @@
-package com.laksana.beritaku.ui.notifications
+package com.laksana.beritaku.ui.saved
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class SavedViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is saved Fragment"
     }
     val text: LiveData<String> = _text
 }
