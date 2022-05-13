@@ -1,6 +1,6 @@
 package com.laksana.beritaku.api
 
-import com.laksana.beritaku.NewsResponse
+import com.laksana.beritaku.models.NewsResponse
 import com.laksana.beritaku.util.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET

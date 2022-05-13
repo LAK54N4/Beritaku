@@ -1,4 +1,4 @@
-package com.laksana.beritaku
+package com.laksana.beritaku.models
 
 
 import com.google.gson.annotations.SerializedName

@@ -1,9 +1,16 @@
-package com.laksana.beritaku
+package com.laksana.beritaku.models
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity(
+    tableName = "result"
+)
 data class Result(
+    @PrimaryKey(autoGenerate = true)
+    var id : Int? = null,
     val `abstract`: String,
     val byline: String,
     @SerializedName("created_date")
