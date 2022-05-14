@@ -1,17 +1,19 @@
 package com.laksana.beritaku
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.laksana.beritaku.databinding.ActivityMainBinding
+import com.laksana.beritaku.ui.news.NewsViewModel
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    lateinit var viewModel: NewsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +31,12 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_news, R.id.navigation_popular, R.id.navigation_saved
             )
         )
+        /*
+        val newsRepository = NewsRepository(NewsDatabase(this))
+        val viewModelProviderFactory = NewsViewModelProviderFactory(newsRepository)
+        viewModel = ViewModelProvider(this@MainActivity, viewModelProviderFactory).get(NewsViewModel::class.java)
+        */
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }

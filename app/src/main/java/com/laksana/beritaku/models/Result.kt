@@ -11,8 +11,9 @@ import com.google.gson.annotations.SerializedName
 data class Result(
     @PrimaryKey(autoGenerate = true)
     var id : Int? = null,
-    val `abstract`: String,
+    //val `abstract`: String,
     val byline: String,
+    /*
     @SerializedName("created_date")
     val createdDate: String,
     @SerializedName("des_facet")
@@ -41,11 +42,14 @@ data class Result(
     val source: String,
     val subheadline: String,
     val subsection: String,
+    */
     @SerializedName("thumbnail_standard")
     val thumbnailStandard: String,
     val title: String,
+            /*
     @SerializedName("updated_date")
     val updatedDate: String,
     val uri: String,
+    */
     val url: String
 )

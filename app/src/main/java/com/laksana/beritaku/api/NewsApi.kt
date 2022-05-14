@@ -18,5 +18,5 @@ interface NewsApi {
         @Query("api-key")
         apikey: String = API_KEY
     ): Response<PopularResponse> // belum create
-    */
+     */
 }

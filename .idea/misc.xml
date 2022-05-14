@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Beritaku/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Beritaku/app/src/main/res/layout/fragment_news.xml" value="0.25416666666666665" />
+        <entry key="..\:/Beritaku/app/src/main/res/layout/item_news.xml" value="0.20854700854700856" />
         <entry key="..\:/Beritaku/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
     </option>

@@ -7,11 +7,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.laksana.beritaku.MainActivity
 import com.laksana.beritaku.databinding.FragmentSavedBinding
+import com.laksana.beritaku.ui.news.NewsViewModel
 
 class SavedFragment : Fragment() {
 
     private var _binding: FragmentSavedBinding? = null
+    lateinit var viewModel: NewsViewModel
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,17 +25,16 @@ class SavedFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(SavedViewModel::class.java)
 
         _binding = FragmentSavedBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel = (activity as MainActivity).viewModel
     }
 
     override fun onDestroyView() {
